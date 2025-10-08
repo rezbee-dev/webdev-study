@@ -20,3 +20,8 @@ Notes and tings for Web Dev
 [roadmap.sh frontend projects](https://roadmap.sh/frontend/projects)
 - Free
 - Provides project ideas categorized by difficulty with project requirements
+
+### Inspiration
+
+[stuffandnonsense](https://stuffandnonsense.co.uk/design)
+- Features Web Designer's Andy Clark's works, which are pretty unique and well-designed
