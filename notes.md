@@ -8,11 +8,15 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
 
 ### 1. Cascade, Specificity, and Inheritance
 
-Topics covered
-- Cascade 6 criteria
-- Cascade vs Inheritance
-- Controlling which styles apply to which elements
-- Shorthand declarations
+<details>
+  <summary>Topics covered</summary>
+
+  - Cascade 6 criteria
+  - Cascade vs Inheritance
+  - Controlling which styles apply to which elements
+  - Shorthand declarations
+</details>
+
 
 Cascade
 - set of rules that browser uses to resolve CSS conflicts
