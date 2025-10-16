@@ -1,18 +1,18 @@
-# Notes
-
-## CSS
+# CSS Notes 
 
 _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edition)_
 
 ======================================================================
 
-### 1. Cascade, Specificity, and Inheritance
+## 1. Cascade, Specificity, and Inheritance
 
 **Topics**
 - Cascade 6 criteria
 - Cascade vs Inheritance
 - Controlling which styles apply to which elements
 - Shorthand declarations
+
+### Cascade 
 
 <details>
   <summary>a) What color will the `h1` tag be?</summary>
@@ -42,7 +42,7 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
 </details>
 
 <details>
-  <summary>b)What are the three things used to resolve CSS conflicts?</summary>
+  <summary>b) What are the three things used to resolve CSS conflicts?</summary>
 
   - Stylesheet origin _(browser defaults aka user-agent styles and your CSS styles)_
   - Seleector Specificity _(inline, ID, class, etc)_
@@ -50,13 +50,13 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
 </details>
 
 <details>
-  <summary>c)How do you override inline styles from CSS file?</summary>
+  <summary>c) How do you override inline styles from CSS file?</summary>
 
   - use `!important` in the CSS file
 </details>
 
 <details>
-  <summary>d)What color will the `h1` tag be?</summary>
+  <summary>d) What color will the `h1` tag be?</summary>
 
   ```html
   <h1 class="title heading">Lel</h1>
@@ -80,7 +80,7 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
   </details>
 </details>
 
-<details><summary>In which order should selectors for styling `a` tag states go in?</summary>
+<details><summary>e) In which order should selectors for styling `a` tag states go in?</summary>
 
   - From top to bottom: link, visited, hover, active
 
