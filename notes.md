@@ -15,7 +15,7 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
 - Shorthand declarations
 
 <details>
-  <summary>What color will the h1 tag be?</summary>
+  <summary>a) What color will the `h1` tag be?</summary>
 
   ```html
   <h1 id="page-title" class="title">Lel</h1>
@@ -34,8 +34,75 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
     color: green;
   }
   ```
+
+  <details><summary>Answer</summary>
+    
+  - Blue
+  </details>
 </details>
 
+<details>
+  <summary>b)What are the three things used to resolve CSS conflicts?</summary>
+
+  - Stylesheet origin _(browser defaults aka user-agent styles and your CSS styles)_
+  - Seleector Specificity _(inline, ID, class, etc)_
+  - Source Order _(order in which styles are declared in the CSS file; whichever appears later in CSS file wins)_
+</details>
+
+<details>
+  <summary>c)How do you override inline styles from CSS file?</summary>
+
+  - use `!important` in the CSS file
+</details>
+
+<details>
+  <summary>d)What color will the `h1` tag be?</summary>
+
+  ```html
+  <h1 class="title heading">Lel</h1>
+  ```
+
+  ```css
+  .title {
+    color: green;
+  }
+
+  .title.heading {
+    color: red;
+  }
+  ```
+
+  <details><summary>Answer</summary>
+    
+  - Red
+  - The more "specific" the selector is or the more IDs, classes, tag names, etc it has means it takes higher precedence
+  - See MDN docs - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity for more info on specificity
+  </details>
+</details>
+
+<details><summary>In which order should selectors for styling `a` tag states go in?</summary>
+
+  - From top to bottom: link, visited, hover, active
+
+  ```css
+  a:link {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: purple;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: red;
+  }
+  ```
+</details>
 
 
 ======================================================================
