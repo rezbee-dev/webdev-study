@@ -42,7 +42,7 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
 </details>
 
 <details>
-  <summary>b) What are the three things used to resolve CSS conflicts?</summary>
+  <summary>b) What three things are used to determine CSS styling/ resolve CSS conflicts?</summary>
 
   - Stylesheet origin _(browser defaults aka user-agent styles and your CSS styles)_
   - Seleector Specificity _(inline, ID, class, etc)_
@@ -104,53 +104,53 @@ _based on ["CSS in Depth"](https://www.manning.com/books/css-in-depth-second-edi
   ```
 </details>
 
+### Inheritance
 
-======================================================================
+<details>
+  <summary>a) What's the CSS value that can be used to allow an element to override its cascaded value with its parent's value? </summary>
 
-### 2. Working with relative units
-_to be filled in later_
+- Ex: Heading #1 & Heading #2 are red due to the `h1` css declaration. What can you use for Heading #2 to override the red color and use the color set by its parent, the `div`?
+  ```html
+  <h1>Heading #1</h1>
+  <div>
+    <h1>Heading #2</h2>
+    <p>I'm blue</p>
+  </div>
+  ```
 
-### 3. Document Flow & Box Model
-_to be filled in later_
+  ```css
+  h1 {
+    color: red
+  }
 
-### 4. Flexbox
-_to be filled in later_
+  div {
+    color: blue
+  }
+  ```
 
-### 5. Grid Layout
-_to be filled in later_
+  <details><summary>Answer</summary>
+    
+  - use `inherit` to override a cascaded value
+ 
+  ```css
+  h1 {
+    color: red
+  }
 
-### 6. Positioning and stacking contexts
-_to be filled in later_
+  div {
+    color: blue
+  }
 
-### 7. Responsive Design
-_to be filled in later_
+  div h1 {
+    color: inherit;
+  }
+  ```
+  </details>
+</details>
 
-### 8. Cascade Layers and Nesting
-_to be filled in later_
+<details><summary>b) What's the one CSS value that lets you override an element's property back to it's default value?</summary>
 
-### 9. Modular CSS and Scope
-_to be filled in later_
+  - `initial`
+</details>
 
-### 10. Container Queries
-_to be filled in later_
 
-### 11. Color and Contrast
-_to be filled in later_
-
-### 12. Typography and Spacing
-_to be filled in later_
-
-### 13. Gradients, shadows, and blend modes
-_to be filled in later_
-
-### 14. Masks, shapes, and clipping
-_to be filled in later_
-
-### 15. Transitions
-_to be filled in later_
-
-### 16. Transforms
-_to be filled in later_
-
-### 17. Animations
-_to be filled in later_
