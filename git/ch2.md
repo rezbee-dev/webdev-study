@@ -53,6 +53,27 @@ doc/**/*.pdf
   - "What's the total difference between my working files and the last commit?"
 </details>
 
-<details><summary></summary>
+<details><summary>How to view list of available graphical tools for git diff?</summary>
 
+- `git difftool --tool-help`
+</details>
+
+<details><summary>How to skip staging files and just commit all changes directly?</summary>
+
+- `git commit -a -m "...."`
+</details>
+
+<details><summary>What does "git rm" do?</summary>
+
+- Deletes teh file from local folder and stages it as a deletion
+</details>
+
+<details><summary>How do you unstage files without deleting them?</summary>
+
+- `git rm --cached <>`
+</details>
+
+left off on pg46....
+
+<details><summary></summary>
 </details>
