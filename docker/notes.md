@@ -68,5 +68,55 @@ Most used commands:
 - `CTRL-P` then `CTRL-Q`
 </details>
 
+<details><summary>Where do docker images come from?</summary>
+
+- When running command like `docker run <image>`, Docker will first search local and then search Docker Hub for the image of the same name
+</details>
+
+<details><summary>How to search for images?</summary>
+
+- `docker search <image>`
+</details>
+
+<details><summary>How would you tag a Docker image for convenience?</summary>
+
+- Ex: `docker tag ubuntu:25.04 ubuntu:latest_lts`
+</details>
+
+<details><summary>What is a Dockerfile</summary>
+
+- file that contains build instructions for an image
+- Ex:
+```
+# Start from the alpine image that is smaller but no fancy tools
+FROM alpine:3.21
+
+# Use /usr/src/app as our workdir. The following instructions will be executed in this location.
+WORKDIR /usr/src/app
+
+# Copy the hello.sh file from this directory to /usr/src/app/ creating /usr/src/app/hello.sh
+COPY hello.sh .
+
+# Alternatively, if we skipped chmod earlier, we can add execution permissions during the build.
+# RUN chmod +x hello.sh
+
+# When running docker run the command will be ./hello.sh
+CMD ["./hello.sh"]
+```
+</details>
+
+<details><summary>What are layers and how do they result in faster builds?</summary>
+
+- Each instruction in Dockerfile translates to a layer in the final image
+- Whenever layer changes, only that layer and subsequent layers after it will need to be re-built
+- Other layers can be sourced from the cache and will not need to be re-run
+- [See docs](https://docs.docker.com/build/cache/)
+</details>
+
+<details><summary>What instruction in Dockerfile is not executed during build time?</summary>
+
+- `CMD [...]`, its only run during `docker run ...`
+</details>
+
 <details><summary></summary>
 </details>
