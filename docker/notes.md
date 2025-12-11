@@ -4,6 +4,17 @@
 
 ## CH2
 
+Most used commands:
+- `docker image ls`: lists all images
+- `docker image rm <image>`: removes an image
+- `docker image pull <image>`: download image without running it
+- `docker container ls -a`: list all running _and_ stopped containers
+- `docker container run <image>`: runs container from image
+- `docker container rm <container>`: removes a container
+- `docker container stop <container>`: stops a container
+- `docker container exec <container>`: executes a command inside the container
+  - Ex, open interactive bash shell in container: `docker container exec -it <container> bash`
+
 <details><summary>How to filter list of containers?</summary>
 
 - `docker container ls -a | grep <name>`
@@ -27,17 +38,6 @@
 - `docker container stop <name>`
 - or `docker container rm --force <name>`
 </details>
-
-Most used commands:
-- `docker image ls`: lists all images
-- `docker image rm <image>`: removes an image
-- `docker image pull <image>`: download image without running it
-- `docker container ls -a`: list all running _and_ stopped containers
-- `docker container run <image>`: runs container from image
-- `docker container rm <container>`: removes a container
-- `docker container stop <container>`: stops a container
-- `docker container exec <container>`: executes a command inside the container
-  - Ex, open interactive bash shell in container: `docker container exec -it <container> bash`
 
 <details><summary>What does the `i` in `docker run -it <image>` do?</summary>
 
@@ -78,9 +78,31 @@ Most used commands:
 - `docker search <image>`
 </details>
 
+<details><summary>What are "tags"?</summary>
+
+- Refers to specific versions of an image
+- Allows you to rename specific images
+</details>
+
 <details><summary>How would you tag a Docker image for convenience?</summary>
 
 - Ex: `docker tag ubuntu:25.04 ubuntu:latest_lts`
+</details>
+
+<details><summary>Exercise 1.5</summary>
+
+- `docker image pull devopsdockeruh/simple-web-service:ubuntu`
+- `docker image pull devopsdockeruh/simple-web-service:alpine`
+- `docker image ls` (to see sizes)
+- `docker run -d --rm -it devopsdockeruh/simple-web-service:alpine`
+- `docker exec -it <alpine-container> sh` (bash does not work on alpine)
+- `tail -f ./text.log`
+</details>
+
+<details><summary>Exercise 1.6</summary>
+
+- `docker run -it devopsdockeruh/pull_exercise`
+- Navigate to "https://hub.docker.com/r/devopsdockeruh/pull_exercise" for password
 </details>
 
 <details><summary>What is a Dockerfile</summary>
@@ -100,9 +122,20 @@ COPY hello.sh .
 # Alternatively, if we skipped chmod earlier, we can add execution permissions during the build.
 # RUN chmod +x hello.sh
 
-# When running docker run the command will be ./hello.sh
+# When running "docker run", the command will be "./hello.sh"
 CMD ["./hello.sh"]
+
+### hello.sh
+# #!/bin/sh
+# echo "Hello, docker!"
+###
 ```
+</details>
+
+<details><summary>How would you build a dockerfile?</summary>
+
+- `docker build -t <image-name> <file location>`
+- `docker build` will result in an image being created
 </details>
 
 <details><summary>What are layers and how do they result in faster builds?</summary>
