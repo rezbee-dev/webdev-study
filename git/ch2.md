@@ -65,15 +65,21 @@ doc/**/*.pdf
 
 <details><summary>What does "git rm" do?</summary>
 
-- Deletes teh file from local folder and stages it as a deletion
+- Deletes the file from local folder and stages it as a deletion
 </details>
 
 <details><summary>How do you unstage files without deleting them?</summary>
 
 - `git rm --cached <>`
+- new command: `git restore --staged <file>`
 </details>
 
-left off on pg46....
+<details><summary>How woud you overwrite the previous commit message?</summary>
+
+- `git commit --amend`
+</details>
+
+left off on page 50
 
 <details><summary></summary>
 </details>
