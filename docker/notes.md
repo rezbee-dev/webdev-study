@@ -4,6 +4,7 @@
 
 ## CH2
 
+## Basics
 Most used commands:
 - `docker image ls`: lists all images
 - `docker image rm <image>`: removes an image
