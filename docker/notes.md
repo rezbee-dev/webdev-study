@@ -143,13 +143,25 @@ CMD ["./hello.sh"]
 
 - Each instruction in Dockerfile translates to a layer in the final image
 - Whenever layer changes, only that layer and subsequent layers after it will need to be re-built
+  - That's why dockerfiles should have layers ordered from least-frequently changed to most-frequently changed
 - Other layers can be sourced from the cache and will not need to be re-run
+- Layer caching results in signficant reduction in build times
 - [See docs](https://docs.docker.com/build/cache/)
 </details>
 
 <details><summary>What instruction in Dockerfile is not executed during build time?</summary>
 
 - `CMD [...]`, its only run during `docker run ...`
+</details>
+
+<details><summary>How to save changes in a container as a new image?</summary>
+
+- Container way:
+  - Run container and make changes (save, modify, remove, etc files in the container)
+  - Check what changed: `docker diff <container_name>`
+  - Save as new image: `docker commit <container_name> <image name>`
+- Dockerfile way:
+  - simply modify the dockerfile and build it as a new image (by renmaing it or adding a tag)
 </details>
 
 <details><summary></summary>

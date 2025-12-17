@@ -79,7 +79,26 @@ doc/**/*.pdf
 - `git commit --amend`
 </details>
 
-left off on page 50
+<details><summary>What are "remote" repositories?</summary>
+
+- Versions of the project that are hosted elsewhere (ex: github.com)
+- Viewing remote repositories: `git remote`
+- "origin" is usually listed as it is the default name
+</details>
+
+<details><summary>What is the command for viewing urls of remote repositories</summary>
+
+- `git remote -v`
+</details>
+
+<details><summary>What are git tags</summary>
+
+- Specific marked points in a repository's history that denotes some meaning (ex: v1.0)
+- Two types:
+  - lightweight tags: just a pointer to a specific commit; temporary tag
+  - annotated tags: tags that are stored as full objects in git database
+</details>
+
 
 <details><summary></summary>
 </details>
