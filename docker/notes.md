@@ -164,5 +164,40 @@ CMD ["./hello.sh"]
   - simply modify the dockerfile and build it as a new image (by renmaing it or adding a tag)
 </details>
 
+<details><summary>Exercise 1.7</summary>
+
+- [source](https://courses.mooc.fi/org/uh-cs/courses/devops-with-docker/chapter-2/in-depth-dive-into-images)
+- Dockerfile
+```yaml
+FROM ubuntu:24.04
+
+WORKDIR /usr/src/app
+
+RUN apt-get update && apt-get install -y curl
+
+COPY script.sh .
+
+RUN chmod +x script.sh
+
+CMD ["./script.sh"]
+```
+- Build command: `docker build -t curler .`
+- Run command: `docker run -it curler`
+</details>
+
+<details><summary>Exercise 1.8</summary>
+
+- Dockerfile:
+
+```yaml
+FROM devopsdockeruh/simple-web-service:alpine
+
+CMD ["server"]
+```
+
+- Build command: `docker build -t web-server .`
+- Run command: `docker run web-server`
+</details>
+
 <details><summary></summary>
 </details>
