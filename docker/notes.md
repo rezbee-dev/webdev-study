@@ -201,3 +201,23 @@ CMD ["server"]
 
 <details><summary></summary>
 </details>
+
+## 2.5 - Volumes and Ports
+
+<details><summary>What happens to data when container is stopped/restarted or when host is rebooted?</summary>
+
+- Data is lost
+- Storage is "ephemeral", only lasting temporarily
+</details>
+
+<details><summary>How do you bind directory from host machine into container?</summary>
+
+- via `-v` option & providing relative path of host machine folder
+- Ex: `$ docker run -v "$(pwd):/mydir" <container> <cmds>`
+  - `${pwd}` is current directory inside host
+  - `mydir` is folder inside container that will be bound to host folder
+  
+</details>
+
+<details><summary></summary>
+</details>
